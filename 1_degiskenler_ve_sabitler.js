@@ -1,10 +1,10 @@
 /*
-console.log("Hoş Geldiniz")
-console.log("123")
-console.error("Hata Oluştu !")
-console.warn("Bir uyarı aldınız..")
+console.log("Hoş Geldiniz") //! Ekrana Yazdırmak.
+console.log("123") 
+console.error("Hata Oluştu !") //! Ekrana hata oluşturma.
+console.warn("Bir uyarı aldınız..") //! Ekrana uyarı verir.
 
- console.clear() */
+ console.clear() */ //! Ekranı temizler.
 
  // ! Değişkenler
 
@@ -15,7 +15,13 @@ password = "muhammetkart"
 console.log(password)
 
 yas = 25;
-console.log(yas) 
+console.log(yas)
+
+cinsiyet = "erkek"
+console.log(cinsiyet)
+
+city = "konya"
+console.log(city)
 
 // ! Değişken Tanımlama Kuralları
 
@@ -27,8 +33,11 @@ var adSoyad;
 adSoyad = "Muhammet Kart";
 console.log(adSoyad)
 
+adSoyad = "Rafii Kart";
+console.log(adSoyad)
+
 const email = "muhammetkart@gmail.com"; //! const yani sabit değişken olursa değiştirilemez.
 console.log(email)
 
-email = "12354@yahoo.com";
+email = "12354@yahoo.com";  //! email bir önceki örnekte const sabit olduğu için ekran hata verecek.
 console.log(email)
