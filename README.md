@@ -1,2 +1,0 @@
-# 010_Javascript_Temelleri
-010_Javascript_Temelleri
