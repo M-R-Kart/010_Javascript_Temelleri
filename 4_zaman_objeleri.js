@@ -29,3 +29,14 @@ console.log(zaman.getMonth() - birthday.getMonth());
 
 console.log(zaman);
 console.log(typeof zaman);
+
+////////////////////////////////////////////////////////////////
+
+let today = new Date();
+let birthday = new Date("1996-6-12");
+
+let age = today.getFullYear()-birthday.getFullYear();
+let ayFarki = today.getMonth()-birthday.getMonth();
+
+
+console.log(age);
