@@ -31,6 +31,7 @@ console.log(zaman);
 console.log(typeof zaman);
 
 ////////////////////////////////////////////////////////////////
+//! Günümüz tarihinde kişinin yaşını hesaplama 
 
 let today = new Date();
 let birthday = new Date("1996-6-12");
