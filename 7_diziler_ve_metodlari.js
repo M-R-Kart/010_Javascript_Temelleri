@@ -1,7 +1,6 @@
 //! ARRAYS
 
-let names = ["arda","kerem","aslı","mert"]; //! (4) ['arda', 'kerem', 'aslı', 'mert'] sonucu verir.
-let years = [1990,1980,2003,2000,2005]; //! (4) [1990, 1980, 2000, 2005] sonucu verir.
+
 let mix = ["arda","yilmaz",1990,null,undefined,["programlama","futbol"]]; //! (6) ['arda', 'yilmaz', 1990, null, undefined, Array(2), 'programlama', 'futbol'] sonucu ver
 
 
@@ -58,3 +57,110 @@ console.log(names);
 
 names.splice(4,1,"selin"); //! 4. indexteki elemanı siler.Yerine "selin" ekler.['aslı', 'eda', 'ahmet', 'furkan', 'selin', 'mehmet', 'mert', 'muhammet']
 console.log(names);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+1. Dizilerin Tanımı
+JavaScript te dizi, birden fazla değeri saklayabilen bir veri yapısıdır. Diziler, köşeli parantezler ([]) ile tanımlanır.
+    Örnek:
+    let years = [1990,1980,2003,2000,2005]; //! (4) [1990, 1980, 2003, 2000, 2005] 
+    let names = ["arda","kerem","aslı","mert"]; //! (4) ['arda', 'kerem', 'aslı', 'mert'] 
+    let renkler = ["kırmızı","mavi","yeşil"]; //! (3) ['kırmızı', 'mavi', 'yeşil']
+
+    console.log(years);
+    console.log(names);
+    console.log(renkler);
+  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+2. Dizi Elemanlarına Erişim
+Dizi elemanlarına erişmek için dizinin indeksini kullanırız. Diziler 0 dan başlar.
+    Örnek:
+    let renkler = ["kırmızı","mavi","yeşil"]; 
+    
+    console.log(renkler[0]); //! kırmızı
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+3. Dizi Uzunluğu
+Bir dizinin uzunluğunu öğrenmek için length özelliğini kullanabilirsiniz.
+    Örnek:
+    let renkler = ["kırmızı","mavi","yeşil"];
+    
+    console.log(renkler.length); //! 3
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+4. Dizi Metodları
+Dizilerle çalışırken sıkça kullanılan bazı metodlar şunlardır:
+
+  a. push()
+  Dizinin sonuna yeni bir eleman ekler.
+    Örnek:
+    let renkler = ["kırmızı","mavi","yeşil"];
+    renkler.push("sarı"); 
+  
+    console.log(renkler);//! (4) ['kırmızı', 'mavi', 'yeşil', 'sari']
+
+  b. pop()
+  Dizinin sonundaki elemanı kaldırır ve döner.
+
+javascript
+Kodu kopyala
+let sonRenk = renkler.pop();
+console.log(sonRenk); // 'sarı'
+console.log(renkler); // ['kırmızı', 'mavi', 'yeşil']
+c. shift()
+Dizinin başındaki elemanı kaldırır ve döner.
+
+javascript
+Kodu kopyala
+let ilkRenk = renkler.shift();
+console.log(ilkRenk); // 'kırmızı'
+console.log(renkler); // ['mavi', 'yeşil']
+d. unshift()
+Dizinin başına yeni bir eleman ekler.
+
+javascript
+Kodu kopyala
+renkler.unshift('siyah');
+console.log(renkler); // ['siyah', 'mavi', 'yeşil']
+e. splice()
+Belirli bir indeksten başlayarak eleman ekler veya kaldırır.
+
+javascript
+Kodu kopyala
+renkler.splice(1, 1, 'turuncu'); // 1. indeksten 1 eleman kaldır ve 'turuncu' ekle
+console.log(renkler); // ['siyah', 'turuncu', 'yeşil']
+5. Dizi Döngüsü
+Dizilerle genellikle döngüler kullanarak çalışırız. forEach() metodu bu iş için kullanışlıdır.
+
+Örnek:
+javascript
+Kodu kopyala
+renkler.forEach(function(renk) {
+    console.log(renk);
+});
+// 'siyah'
+// 'turuncu'
+// 'yeşil'
+6. Uygulama
+Şimdi, yukarıdaki bilgileri kullanarak basit bir uygulama yapalım.
+
+Visual Studio Code’da yeni bir JavaScript dosyası oluştur (örneğin, app.js).
+Aşağıdaki kodu kopyala ve yapıştır:
+javascript
+Kodu kopyala
+let meyveler = ['elma', 'muz', 'çilek'];
+
+// Yeni meyve ekle
+meyveler.push('portakal');
+console.log(meyveler);
+
+// Başındaki meyveyi kaldır
+meyveler.shift();
+console.log(meyveler);
+
+// Her meyveyi yazdır
+meyveler.forEach(function(meyve) {
+    console.log(meyve);
+});
+Terminalden node app.js komutunu kullanarak kodunu çalıştır.
+Sonuç
+Bu temel bilgilerle JavaScript dizileri ve bazı metodları hakkında bir başlangıç yaptık. Herhangi bir sorunuz olursa veya başka bir konu hakkında daha fazla bilgi isterseniz sormaktan çekinmeyin!
