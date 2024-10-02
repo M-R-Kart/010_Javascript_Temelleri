@@ -4,10 +4,7 @@ const firsName = "Muhammet";
 const lastName = "Kart";
 const age = "28";
 let hobbies ="formula1 sinema spor kitap yazılım";
-
 let veri;
-
-//* 1. String Birleştirme (Concatenation)
 
 veri = firsName+" "+lastName; //! Muhammet Kart " " boşluk koymaya yarar.
 veri = "Muhammet";
@@ -16,22 +13,15 @@ veri = 'Benim adım' +firsName+' '+lastName+' ve yaşım '+age+' ve İstanbul\'d
 veri = firsName.concat(' ',lastName); //! Muhammet Kart concat methodu ile birleştirir.
 veri = veri.toUpperCase(); //! Bütün harfleri büyük yapan toUpperCase metodu
 veri = veri.toLowerCase(); //! Bütün harfleri küçük yapan toLowerCase metodu
-
 veri = veri.substring(3,7); //! Muhammet Kart (3. indexten başlayarak 7. indexe kadar) amme sonucu verir.
 veri = veri.slice(2,8); //! Muhammet Kart (2. indexten başlayarak 8. indexe kadar) hammet sonucu verir. Alternatif olarak slice metodu da kullanabilirsiniz.
-
 veri = veri.indexOf("t"); //! Muhammet Kart içinde "t" harfi ilk olarak (8) hangi indexte olduğunu verir.
-
 veri = veri.replace('Muhammet','Rafii'); //! Muhammet Kart -> Rafii Kart
-
 veri = veri.length;  //! Muhammet Kart içindeki karakter sayısını verir.
-
 veri = hobbies.split(' ');  //! formula1,sinema,spor,kitap,yazılım olarak ayırılmış hobbies
-
 
 console.log(veri);
 console.log(typeof veri);
-
 
 //////////////////////////////////////////////////////////////
 1. String Oluşturma
@@ -146,21 +136,39 @@ console.log(kesilme);
 
 //////////////////////////////////////////////////////////////
 10. String'i Dizilere Dönüştürme
-split() metodu ile bir string’i belirli bir ayırıcı ile parçalara ayırabilirsin.
+//! split() metodu ile bir string’i belirli bir ayırıcı ile parçalara ayırabilirsin.
 
-let csv = "elma,armut,muz";
-let fruits = csv.split(","); // ["elma", "armut", "muz"]
+let veri = "elma,armut,karpuz"; //! elma,armut,karpuz
+
+let meyve = veri.split(","); //! (3) ['elma', 'armut', 'karpuz']
+
+console.log(veri);
+console.log(meyve);
 
 //////////////////////////////////////////////////////////////
 11. Diziyi String'e Dönüştürme
-join() metodu ile bir dizi öğelerini birleştirerek yeni bir string oluşturabilirsin.
+//! join() metodu ile bir dizi öğelerini birleştirerek yeni bir string oluşturabilirsin.
 
-let fruitString = fruits.join(" - "); // "elma - armut - muz"
+let veri = "elma,armut,karpuz"; //! elma,armut,karpuz
+
+let meyve = veri.split(","); //! (3) ['elma', 'armut', 'karpuz']
+
+let meyveString = meyve.join(","); //! elma - armut - karpuz
+
+console.log(veri);
+console.log(meyve);
+console.log(meyveString);
 
 //////////////////////////////////////////////////////////////
 12. Template Literals
 Backtick ( ) kullanarak çok satırlı string’ler oluşturabilir ve değişkenleri gömme (interpolasyon) yapabilirsin.
 
-let age = 25;
-let greeting = `Benim yaşım ${age} yaşında.`;
+let ad = "Muhammet";
+let soyAd = "Kart";
+let age = 28;
+let job = "Polis";
+
+let selamla = `Benim adım ${ad} soyadım ${soyAd} yaşım ${age} mesleğim ${job}`;
+
+console.log(selamla);
 
