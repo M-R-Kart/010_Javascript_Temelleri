@@ -1,18 +1,6 @@
 //! ARRAYS
 
-
-let mix = ["arda","yilmaz",1990,null,undefined,["programlama","futbol"]]; //! (6) ['arda', 'yilmaz', 1990, null, undefined, Array(2), 'programlama', 'futbol'] sonucu ver
-
-
-console.log(names);
-console.log(typeof names);
-console.log(names.length);
-console.log(years);
-console.log(mix);
-
 //* Get Array İtem
-
-console.log(names[0]); //! arda 0. indexteki eleman gelir.
 
 //* Set Array İtem
 
@@ -29,8 +17,6 @@ names.unshift("furkan"); //! Furkan ismini diziye ekler. unshift metodu dizinin 
 console.log(names);
 
 //* Remove Array Item
-
-years.pop(); //! 2005 Dizinin sonundaki elemanı siler. pop metodu dizinin sonundaki elemanı siler.
 console.log(years);
 years.shift(); //! 1990 Dizinin başındaki elemanı siler. shift metodu dizinin başındaki elemanı siler.
 console.log(years);
@@ -74,40 +60,50 @@ JavaScript te dizi, birden fazla değeri saklayabilen bir veri yapısıdır. Diz
 2. Dizi Elemanlarına Erişim
 Dizi elemanlarına erişmek için dizinin indeksini kullanırız. Diziler 0 dan başlar.
     Örnek:
+    let names = ["arda","kerem","aslı","mert"];
     let renkler = ["kırmızı","mavi","yeşil"]; 
-    
+
+    console.log(names[0]); //! arda
     console.log(renkler[0]); //! kırmızı
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 3. Dizi Uzunluğu
 Bir dizinin uzunluğunu öğrenmek için length özelliğini kullanabilirsiniz.
     Örnek:
+    let names = ["arda","kerem","aslı","mert"];
     let renkler = ["kırmızı","mavi","yeşil"];
-    
+
+    console.log(names.length); //! 4
     console.log(renkler.length); //! 3
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
 4. Dizi Metodları
 Dizilerle çalışırken sıkça kullanılan bazı metodlar şunlardır:
 
-  a. push()
+    a. push()
   Dizinin sonuna yeni bir eleman ekler.
     Örnek:
     let renkler = ["kırmızı","mavi","yeşil"];
     renkler.push("sarı"); 
   
-    console.log(renkler);//! (4) ['kırmızı', 'mavi', 'yeşil', 'sari']
+    console.log(renkler); //! (4) ['kırmızı', 'mavi', 'yeşil', 'sari']
 
   b. pop()
   Dizinin sonundaki elemanı kaldırır ve döner.
+    Örnek:
+    let renkler = ["kırmızı","mavi","yeşil"];
+    let sonRenk = renkler.pop();
 
-javascript
-Kodu kopyala
-let sonRenk = renkler.pop();
-console.log(sonRenk); // 'sarı'
-console.log(renkler); // ['kırmızı', 'mavi', 'yeşil']
-c. shift()
-Dizinin başındaki elemanı kaldırır ve döner.
+    console.log(sonRenk); //! yeşil
+    console.log(renkler); //! (2) ['kırmızı', 'mavi']
+
+    let years = [1990,1980,2003,2000,2005];
+    years.pop();
+
+    console.log(years); //! (4) [1990, 1980, 2003, 2000]
+
+  c. shift()
+  Dizinin başındaki elemanı kaldırır ve döner.
 
 javascript
 Kodu kopyala
